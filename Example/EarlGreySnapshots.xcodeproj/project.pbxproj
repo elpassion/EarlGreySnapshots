@@ -15,6 +15,7 @@
 		8CA178D71ECEFCBC005C5187 /* SnapshotControllerFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178D61ECEFCBC005C5187 /* SnapshotControllerFactoryMock.swift */; };
 		8CA178E31ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178E21ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift */; };
 		9E4F9AC23E811C202FEEDCBA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; };
+		C9D3067BB5699DDF6162D081 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837D38416539EBAA783427A /* EarlGrey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8CA178E21ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreySnapshotErrorTests.swift; sourceTree = "<group>"; };
 		AE4A1F933B66B668C52D05C0 /* Pods_EarlGreySnapshots_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarlGreySnapshots_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B50FC18FD08C93B5369A9B6F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B837D38416539EBAA783427A /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		C012EBB5D2BB9C4E98FF7169 /* EarlGreySnapshots.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EarlGreySnapshots.podspec; path = ../EarlGreySnapshots.podspec; sourceTree = "<group>"; };
 		C302E045887509D7CDB71378 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F477714251D07FBC0BB17924 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = "${SRCROOT}/Pods/EarlGrey/EarlGrey/EarlGrey.framework"; sourceTree = SRCROOT; };
@@ -86,6 +88,7 @@
 				8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */,
 				8CA178CF1ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				B837D38416539EBAA783427A /* EarlGrey.swift */,
 			);
 			name = EarlGreySnapshots_Tests;
 			path = Tests;
@@ -253,6 +256,7 @@
 				8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */,
 				8CA178E31ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift in Sources */,
 				8CA178D01ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift in Sources */,
+				C9D3067BB5699DDF6162D081 /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
