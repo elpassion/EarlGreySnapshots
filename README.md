@@ -1,6 +1,6 @@
 # EarlGreySnapshots
 
-[![CI Status](http://img.shields.io/travis/turekj/EarlGreySnapshots.svg?style=flat)](https://travis-ci.org/turekj/EarlGreySnapshots)
+[![CI Status](http://img.shields.io/travis/elpassion/EarlGreySnapshots.svg?style=flat)](https://travis-ci.org/turekj/EarlGreySnapshots)
 [![Version](https://img.shields.io/cocoapods/v/EarlGreySnapshots.svg?style=flat)](http://cocoapods.org/pods/EarlGreySnapshots)
 [![License](https://img.shields.io/cocoapods/l/EarlGreySnapshots.svg?style=flat)](http://cocoapods.org/pods/EarlGreySnapshots)
 [![Platform](https://img.shields.io/cocoapods/p/EarlGreySnapshots.svg?style=flat)](http://cocoapods.org/pods/EarlGreySnapshots)
