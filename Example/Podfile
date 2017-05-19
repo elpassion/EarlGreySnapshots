@@ -1,7 +1,10 @@
+platform :ios, '9.0'
+
 use_frameworks!
+inhibit_all_warnings!
+
 target 'EarlGreySnapshots_Tests' do
   pod 'EarlGreySnapshots', :path => '../'
-  
-  pod 'Quick', '~> 1.0.0'
-  pod 'Nimble', '~> 5.1.1'
+
 end
+

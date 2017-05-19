@@ -1,15 +1,7 @@
-#
-# Be sure to run `pod lib lint EarlGreySnapshots.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'EarlGreySnapshots'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EarlGreySnapshots.'
+  s.summary          = 'EarlGrey action for snapshot testing.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,17 +18,12 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'turekj' => 'jakub.turek@elpassion.pl' }
   s.source           = { :git => 'https://github.com/turekj/EarlGreySnapshots.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/KubaTurek'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'EarlGreySnapshots/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'EarlGreySnapshots' => ['EarlGreySnapshots/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation', 'XCTest'
+  s.dependency 'EarlGrey', '~> 1.9'
+  s.dependency 'FBSnapshotTestCase', '~> 2.1'
 end
