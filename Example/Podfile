@@ -1,0 +1,7 @@
+use_frameworks!
+target 'EarlGreySnapshots_Tests' do
+  pod 'EarlGreySnapshots', :path => '../'
+  
+  pod 'Quick', '~> 1.0.0'
+  pod 'Nimble', '~> 5.1.1'
+end
