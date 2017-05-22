@@ -68,7 +68,7 @@ it, simply add following lines to your Podfile:
 ```ruby
 pod 'EarlGrey', '~> 1.9'
 pod 'FBSnapshotTestCase', '~> 2.1'
-pod 'EarlGreySnapshots', '~> 0.0.1'
+pod 'EarlGreySnapshots', '~> 0.0.2'
 ```
 
 Don't forget to run `pod install` afterwards!
