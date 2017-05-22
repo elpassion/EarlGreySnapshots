@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'EarlGreySnapshots'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'EarlGrey action for snapshot testing.'
   s.description      = <<-DESC
                        EarlGrey actions for FBSnapshotTestCase. Provides functional tests counterpart for [Nimble Snapshots](https://github.com/ashfurrow/Nimble-Snapshots).
