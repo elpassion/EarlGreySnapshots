@@ -29,7 +29,7 @@ Now it is time to record your first reference snapshot. Select the reference ele
 
 ```swift
 EarlGrey.select(elementWithMatcher: grey_kindOfClass(AViewToSnapshotClass.self))
-    .perform(grey_recordSnapshot())
+    .assert(grey_recordSnapshot())
 ```
 
 Run the test target. The test should fail with the following error:
@@ -42,7 +42,7 @@ Having followed the instruction you should alter the test as following:
 
 ```swift
 EarlGrey.select(elementWithMatcher: grey_kindOfClass(AViewToSnapshotClass.self))
-    .perform(grey_verifySnapshot())
+    .assert(grey_verifySnapshot())
 ```
 
 That's it! From now on the tests will verify whether selected view matches reference snapshot.

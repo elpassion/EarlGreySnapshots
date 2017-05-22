@@ -28,5 +28,14 @@ class TestNameParserTests: XCTestCase {
         XCTAssertEqual("TestNameParserTests", result.testClassName)
         XCTAssertEqual("testParseCorrectlyParsesTestCaseInfo", result.testMethodName)
     }
+
+    func testParseCorrectlyParsesTargetPrefixedTestCaseInfo() {
+        let name = "-[EarlGreySnapshots_Tests.EarlGreySnapshotErrorTests testMethodName]"
+
+        let result = sut.parse(testName: name)
+
+        XCTAssertEqual("EarlGreySnapshots_Tests_EarlGreySnapshotErrorTests", result.testClassName)
+        XCTAssertEqual("testMethodName", result.testMethodName)
+    }
     
 }
