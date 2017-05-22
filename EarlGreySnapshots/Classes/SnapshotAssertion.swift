@@ -5,7 +5,7 @@
 
 import EarlGrey
 
-func grey_snapshot(testCaseName: String?, recordMode: Bool, deviceAgnostic: Bool) -> GREYActionBlock {
+func grey_snapshot(testCaseName: String?, recordMode: Bool, deviceAgnostic: Bool) -> GREYAssertionBlock {
     let testCase = testCaseName ?? CurrentTestObserver.shared.currentCase?.name ?? "-[UnknownTestCase unknownMethod]"
     let testInfo = TestNameParser().parse(testName: testCase)
 
@@ -16,8 +16,8 @@ func grey_snapshot(testCaseName: String?, recordMode: Bool, deviceAgnostic: Bool
 }
 
 func grey_snapshot(testName: String, snapshotName: String, recordMode: Bool, deviceAgnostic: Bool,
-                   controllerFactory: SnapshotControllerCreating? = nil) -> GREYActionBlock {
-    return GREYActionBlock.action(withName: "snapshot", perform: { element, errorOrNil -> Bool in
+                   controllerFactory: SnapshotControllerCreating? = nil) -> GREYAssertionBlock {
+    return GREYAssertionBlock.init(name: "snapshot", assertionBlockWithError: { element, errorOrNil -> Bool in
         guard let view = element as? UIView else { return false }
 
         let factory = controllerFactory ?? SnapshotControllerFactory(environment: ProcessInfo.processInfo.environment)
