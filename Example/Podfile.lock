@@ -14,13 +14,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   EarlGreySnapshots:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   EarlGrey: b78a93bd5fddba9a79a8e5ec5ae8a7718453ca40
   EarlGreySnapshots: 99242831a0705f4a9d8820401992c58b90824ed9
-  FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: 4c6722bca84d48480b20a69d219cbdcd5e3b2a46
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
