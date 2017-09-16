@@ -6,7 +6,7 @@
 import Foundation
 
 protocol BundleNameProviding {
-    var name: String { get }
+    var name: String? { get }
 }
 
 struct BundleNameProvider: BundleNameProviding {
@@ -17,8 +17,8 @@ struct BundleNameProvider: BundleNameProviding {
 
     // MARK: - BundleNameProviding
 
-    var name: String {
-        return bundle.infoDictionary?["CFBundleName"] as? String ?? ""
+    var name: String? {
+        return bundle.infoDictionary?["CFBundleName"] as? String
     }
 
     // MARK: - Private

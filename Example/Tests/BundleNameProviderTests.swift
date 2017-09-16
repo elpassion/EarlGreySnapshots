@@ -34,7 +34,7 @@ class BundleNameProviderTests: XCTestCase {
     func testProviderShouldReturnEmptyBundleName() {
         bundleStub.bundleName = nil
 
-        XCTAssertEqual(sut.name, "")
+        XCTAssertNil(sut.name)
     }
 
 }
