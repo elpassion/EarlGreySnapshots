@@ -18,7 +18,7 @@ struct BundleNameProvider: BundleNameProviding {
     // MARK: - BundleNameProviding
 
     var name: String {
-        return ""
+        return bundle.infoDictionary?["CFBundleName"] as? String ?? ""
     }
 
     // MARK: - Private
