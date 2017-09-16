@@ -8,8 +8,10 @@ import EarlGrey
 func grey_snapshot(testCaseName: String?, recordMode: Bool, deviceAgnostic: Bool) -> GREYAssertionBlock {
     let testCase = testCaseName ?? CurrentTestObserver.shared.currentCase?.name ?? "-[UnknownTestCase unknownMethod]"
     let testInfo = TestNameParser().parse(testName: testCase)
+    let bundleNameProvider = BundleNameProvider(bundle: Bundle.testBundle)
+    let testName = [bundleNameProvider.name, testInfo.testClassName].flatMap { $0 }.joined(separator: ".")
 
-    return grey_snapshot(testName: testInfo.testClassName,
+    return grey_snapshot(testName: testName,
                          snapshotName: testInfo.testMethodName,
                          recordMode: recordMode,
                          deviceAgnostic: deviceAgnostic)
