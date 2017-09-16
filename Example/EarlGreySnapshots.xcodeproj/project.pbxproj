@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28B675FE4C2E2B6E7D4F9E61 /* Pods_EarlGreySnapshots_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4A1F933B66B668C52D05C0 /* Pods_EarlGreySnapshots_Tests.framework */; };
 		6F892B7C62344DF1D0987194 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4EB29DFE1F6D04FD009414C1 /* BundleNameProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */; };
 		4EB29E011F6D0754009414C1 /* BundleStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E001F6D0754009414C1 /* BundleStub.swift */; };
 		8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */; };
 		8CA178CC1ECEF1D7005C5187 /* SnapshotActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		312685EDB7169AC8980A968C /* Pods-EarlGreySnapshots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlGreySnapshots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarlGreySnapshots_Tests/Pods-EarlGreySnapshots_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleNameProviderTests.swift; sourceTree = "<group>"; };
 		4EB29E001F6D0754009414C1 /* BundleStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleStub.swift; sourceTree = "<group>"; };
 		5137F413DBCA365CA8F79E67 /* Pods-EarlGreySnapshots_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlGreySnapshots_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EarlGreySnapshots_Tests/Pods-EarlGreySnapshots_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* EarlGreySnapshots_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarlGreySnapshots_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			children = (
 				8CA178D31ECEFC1B005C5187 /* Mocks */,
 				4EB29DFF1F6D0742009414C1 /* Stubs */,
+				4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */,
 				8CA178E21ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift */,
 				8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */,
 				8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */,
@@ -291,6 +294,7 @@
 			files = (
 				4EB29E011F6D0754009414C1 /* BundleStub.swift in Sources */,
 				8CA178D71ECEFCBC005C5187 /* SnapshotControllerFactoryMock.swift in Sources */,
+				4EB29DFE1F6D04FD009414C1 /* BundleNameProviderTests.swift in Sources */,
 				8CA178CC1ECEF1D7005C5187 /* SnapshotActionTests.swift in Sources */,
 				8CA178D51ECEFC92005C5187 /* SnapshotControllerMock.swift in Sources */,
 				8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */,
