@@ -11,7 +11,8 @@ protocol ImageDirectoryProviding {
 
 class ImageDirectoryProvider: ImageDirectoryProviding {
 
-    init(environment: [String: String] = ProcessInfo.processInfo.environment, suffixes: NSOrderedSet = FBSnapshotTestCaseDefaultSuffixes()) {
+    init(environment: [String: String] = ProcessInfo.processInfo.environment,
+         suffixes: NSOrderedSet = FBSnapshotTestCaseDefaultSuffixes()) {
         self.environment = environment
         self.suffixes = suffixes
     }
