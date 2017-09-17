@@ -21,22 +21,19 @@ class ImageDirectoryProviderTests: XCTestCase {
         let suffixes = NSOrderedSet(array: ["_64", "_32"])
         sut = ImageDirectoryProvider(environment: environment, suffixes: suffixes)
 
-        XCTAssertEqual(sut.recordDirectory, "/reference/directory_64")
-        XCTAssertEqual(sut.verifyDirectories, ["/reference/directory_64", "/reference/directory_32"])
+        XCTAssertEqual(sut.directory, "/reference/directory_64")
     }
 
     func testProviderShouldReturnCorrectRecordAndVerifyDirectoriesForEmptyEnvironmentAndSuffixes() {
         sut = ImageDirectoryProvider(environment: [:], suffixes: NSOrderedSet(array: []))
 
-        XCTAssertEqual(sut.recordDirectory, "ReferenceImages")
-        XCTAssertEqual(sut.verifyDirectories, ["ReferenceImages"])
+        XCTAssertEqual(sut.directory, "ReferenceImages")
     }
 
     func testProviderShouldReturnCorrectRecordAndVerifyDirectoriesForDefaultParameters() {
         sut = ImageDirectoryProvider()
 
-        XCTAssertEqual(sut.recordDirectory, "ReferenceImages_64")
-        XCTAssertEqual(sut.verifyDirectories, ["ReferenceImages_64", "ReferenceImages_32"])
+        XCTAssertEqual(sut.directory, "ReferenceImages_64")
     }
 
 }
