@@ -7,24 +7,18 @@ import FBSnapshotTestCase
 
 protocol SnapshotControllerCreating {
 
-    func makeSnapshotController(testName: String, deviceAgnostic: Bool, recordMode: Bool) -> SnapshotTestController
+    func makeSnapshotController(withInfo info: SnapshotControllerInfo) -> SnapshotTestController
 
 }
 
 class SnapshotControllerFactory: SnapshotControllerCreating {
 
-    private let environment: [String: String]
-
-    init(environment: [String: String]) {
-        self.environment = environment
-    }
-
-    func makeSnapshotController(testName: String, deviceAgnostic: Bool, recordMode: Bool) -> SnapshotTestController {
-        let testController: FBSnapshotTestController = FBSnapshotTestController(testName: testName)
-        testController.isDeviceAgnostic = deviceAgnostic
-        testController.recordMode = recordMode
+    func makeSnapshotController(withInfo info: SnapshotControllerInfo) -> SnapshotTestController {
+        let testController: FBSnapshotTestController = FBSnapshotTestController(testName: info.testName)
+        testController.isDeviceAgnostic = info.deviceAgnostic
+        testController.recordMode = info.recordMode
         testController.usesDrawViewHierarchyInRect = false
-        testController.referenceImagesDirectory = environment["FB_REFERENCE_IMAGE_DIR"]
+        testController.referenceImagesDirectory = info.imagesDirectory
 
         return testController
     }

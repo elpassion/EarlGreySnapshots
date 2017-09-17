@@ -9,14 +9,10 @@ class SnapshotControllerFactoryMock: SnapshotControllerCreating {
 
     var controllerMock = SnapshotControllerMock()
 
-    var testName: String?
-    var deviceAgnostic: Bool?
-    var recordMode: Bool?
+    private(set) var info: SnapshotControllerInfo?
 
-    func makeSnapshotController(testName: String, deviceAgnostic: Bool, recordMode: Bool) -> SnapshotTestController {
-        self.testName = testName
-        self.deviceAgnostic = deviceAgnostic
-        self.recordMode = recordMode
+    func makeSnapshotController(withInfo info: SnapshotControllerInfo) -> SnapshotTestController {
+        self.info = info
 
         return controllerMock
     }

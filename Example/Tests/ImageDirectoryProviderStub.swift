@@ -8,7 +8,6 @@ import Foundation
 
 class ImageDirectoryProviderStub: ImageDirectoryProviding {
 
-    let recordDirectory: String = "RecordedDirectory_64"
-    let verifyDirectories: [String] = ["VerifiedDirectory_64", "VerifiedDirectory_32"]
+    let directory: String = "FakeDirectory_64"
 
 }
