@@ -5,11 +5,11 @@
 
 import FBSnapshotTestCase
 
-protocol ImageDirectoryProviding {
+protocol ImagesDirectoryProviding {
     var directory: String { get }
 }
 
-class ImageDirectoryProvider: ImageDirectoryProviding {
+class ImagesDirectoryProvider: ImagesDirectoryProviding {
 
     init(environment: [String: String] = ProcessInfo.processInfo.environment,
          suffixes: NSOrderedSet = FBSnapshotTestCaseDefaultSuffixes()) {

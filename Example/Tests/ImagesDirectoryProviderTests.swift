@@ -6,9 +6,9 @@
 @testable import EarlGreySnapshots
 import XCTest
 
-class ImageDirectoryProviderTests: XCTestCase {
+class ImagesDirectoryProviderTests: XCTestCase {
 
-    var sut: ImageDirectoryProvider!
+    var sut: ImagesDirectoryProvider!
 
     override func tearDown() {
         super.tearDown()
@@ -19,19 +19,19 @@ class ImageDirectoryProviderTests: XCTestCase {
     func testProviderShouldReturnCorrectRecordAndVerifyDirectories() {
         let environment = ["FB_REFERENCE_IMAGE_DIR": "/reference/directory"]
         let suffixes = NSOrderedSet(array: ["_64", "_32"])
-        sut = ImageDirectoryProvider(environment: environment, suffixes: suffixes)
+        sut = ImagesDirectoryProvider(environment: environment, suffixes: suffixes)
 
         XCTAssertEqual(sut.directory, "/reference/directory_64")
     }
 
     func testProviderShouldReturnCorrectRecordAndVerifyDirectoriesForEmptyEnvironmentAndSuffixes() {
-        sut = ImageDirectoryProvider(environment: [:], suffixes: NSOrderedSet(array: []))
+        sut = ImagesDirectoryProvider(environment: [:], suffixes: NSOrderedSet(array: []))
 
         XCTAssertEqual(sut.directory, "ReferenceImages")
     }
 
     func testProviderShouldReturnCorrectRecordAndVerifyDirectoriesForDefaultParameters() {
-        sut = ImageDirectoryProvider()
+        sut = ImagesDirectoryProvider()
 
         XCTAssertEqual(sut.directory, "ReferenceImages_64")
     }

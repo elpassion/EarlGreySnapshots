@@ -22,12 +22,12 @@ func grey_snapshot(testName: String,
                    recordMode: Bool,
                    deviceAgnostic: Bool,
                    controllerFactory: SnapshotControllerCreating? = nil,
-                   imageDirectoryProvider: ImageDirectoryProviding? = nil) -> GREYAssertionBlock {
+                   imageDirectoryProvider: ImagesDirectoryProviding? = nil) -> GREYAssertionBlock {
     return GREYAssertionBlock.init(name: "snapshot", assertionBlockWithError: { element, errorOrNil -> Bool in
         guard let view = element as? UIView else { return false }
 
         let factory = controllerFactory ?? SnapshotControllerFactory()
-        let directoryProvider = imageDirectoryProvider ?? ImageDirectoryProvider()
+        let directoryProvider = imageDirectoryProvider ?? ImagesDirectoryProvider()
 
         let snapshotInfo = SnapshotControllerInfo(testName: testName,
                                                   deviceAgnostic: deviceAgnostic,

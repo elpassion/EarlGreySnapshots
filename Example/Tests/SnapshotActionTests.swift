@@ -10,7 +10,7 @@ class SnapshotActionTests: XCTestCase {
 
     var controller: SnapshotControllerMock!
     var factory: SnapshotControllerFactoryMock!
-    var directoryProviderStub: ImageDirectoryProviding!
+    var directoryProviderStub: ImagesDirectoryProviding!
     var view: UIView!
 
     override func setUp() {
@@ -18,7 +18,7 @@ class SnapshotActionTests: XCTestCase {
         controller = SnapshotControllerMock()
         factory = SnapshotControllerFactoryMock()
         factory.controllerMock = controller
-        directoryProviderStub = ImageDirectoryProviderStub()
+        directoryProviderStub = ImagesDirectoryProviderStub()
         view = UIView()
     }
 

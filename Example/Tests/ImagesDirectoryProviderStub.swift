@@ -6,7 +6,7 @@
 @testable import EarlGreySnapshots
 import Foundation
 
-class ImageDirectoryProviderStub: ImageDirectoryProviding {
+class ImagesDirectoryProviderStub: ImagesDirectoryProviding {
 
     let directory: String = "FakeDirectory_64"
 
