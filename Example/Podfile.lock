@@ -1,6 +1,6 @@
 PODS:
   - EarlGrey (1.12.1)
-  - EarlGreySnapshots (0.0.2):
+  - EarlGreySnapshots (0.0.3):
     - EarlGrey (~> 1.12)
     - FBSnapshotTestCase (~> 2.1)
   - FBSnapshotTestCase (2.1.4):
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
-  EarlGreySnapshots: c00c202eb10d04c3b3b418cb0f651189590dd701
+  EarlGreySnapshots: d0740d4c024a22ca3d6670ae630a4d54e862f429
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: fc8cd5b940c91af35a82834d4961f0ef3f19756f
