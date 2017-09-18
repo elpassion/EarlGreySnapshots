@@ -24,7 +24,7 @@ extension XCTestObservationCenter {
 
     override open class func initialize() {
         super.initialize()
-        XCTestObservationCenter.shared().addTestObserver(CurrentTestObserver.shared)
+        XCTestObservationCenter.shared.addTestObserver(CurrentTestObserver.shared)
     }
 
 }
