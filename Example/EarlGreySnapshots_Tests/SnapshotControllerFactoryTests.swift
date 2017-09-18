@@ -47,7 +47,7 @@ class SnapshotControllerFactoryTests: XCTestCase {
         XCTAssertTrue(secondController.recording)
     }
 
-    func testControllerHasCorrectimagesDirectorySettingSet() {
+    func testControllerHasCorrectReferenceImagesDirectorySet() {
         let info = SnapshotControllerInfo.testInfo(deviceAgnostic: false,
                                                    recordMode: false,
                                                    imagesDirectory: "/reference/directory")
