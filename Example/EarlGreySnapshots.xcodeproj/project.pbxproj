@@ -188,6 +188,7 @@
 			buildPhases = (
 				51EAFDDFCB91DC2BCCC80BCC /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
+				4E6E64301F700944001DCE28 /* SwiftLint */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				997AC0FC61DC8002F83BC4B5 /* [CP] Embed Pods Frameworks */,
@@ -249,6 +250,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E6E64301F700944001DCE28 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd EarlGreySnapshots_Tests; ${PODS_ROOT}/SwiftLint/swiftlint\ncd ../../EarlGreySnapshots/; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		51EAFDDFCB91DC2BCCC80BCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
