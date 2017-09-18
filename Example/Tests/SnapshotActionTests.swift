@@ -45,8 +45,8 @@ class SnapshotActionTests: XCTestCase {
 
         XCTAssertFalse(factory.info!.recordMode)
         XCTAssertTrue(factory.info!.deviceAgnostic)
-        XCTAssertEqual("The Test Name", factory.info!.testName)
-        XCTAssertEqual("FakeDirectory_64", factory.info!.imagesDirectory)
+        XCTAssertEqual("The Test Name", factory.info?.testName)
+        XCTAssertEqual("FakeDirectory_64", factory.info?.imagesDirectory)
     }
 
     func testAssertionShouldInvokeControllersCompareWithCorrectArguments() {
@@ -97,7 +97,7 @@ class SnapshotActionTests: XCTestCase {
 
         XCTAssertEqual(error, EarlGreySnapshotError.recording(deviceAgnostic: false) as NSError)
         XCTAssertFalse(success)
-        XCTAssertEqual("FakeDirectory_64", factory.info!.imagesDirectory)
+        XCTAssertEqual("FakeDirectory_64", factory.info?.imagesDirectory)
     }
 
     func testActionShouldAlwaysPassDeviceAgnosticToErrorInRecordMode() {
