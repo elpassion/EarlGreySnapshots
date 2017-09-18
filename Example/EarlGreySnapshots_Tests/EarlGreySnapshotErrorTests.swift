@@ -18,5 +18,5 @@ class EarlGreySnapshotErrorTests: XCTestCase {
 
         XCTAssertEqual("Image recorded successfully! Replace with grey_verifyDeviceAgnosticSnapshot().", failureReason)
     }
-    
+
 }

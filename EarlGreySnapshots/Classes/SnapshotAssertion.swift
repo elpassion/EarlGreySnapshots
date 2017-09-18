@@ -17,9 +17,12 @@ func grey_snapshot(testName: String,
                    recordMode: Bool,
                    deviceAgnostic: Bool,
                    controllerFactory: SnapshotControllerCreating = SnapshotControllerFactory(),
-                   imagesDirectoryProvider: ImagesDirectoryProviding = ImagesDirectoryProvider()) -> GREYAssertionBlock {
-    return GREYAssertionBlock.init(name: "snapshot", assertionBlockWithError: { element, errorOrNil -> Bool in
-        guard let view = element as? UIView else { return false }
+                   imagesDirectoryProvider: ImagesDirectoryProviding = ImagesDirectoryProvider())
+    -> GREYAssertionBlock {
+    return GREYAssertionBlock(name: "snapshot") { element, errorOrNil -> Bool in
+        guard let view = element as? UIView else {
+            return false
+        }
 
         let snapshotInfo = SnapshotControllerInfo(testName: testName,
                                                   deviceAgnostic: deviceAgnostic,
@@ -38,5 +41,5 @@ func grey_snapshot(testName: String,
         }
 
         return errorOrNil?.pointee == nil
-    })
+    }
 }

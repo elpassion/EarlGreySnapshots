@@ -104,5 +104,5 @@ class SnapshotActionTests: XCTestCase {
 
         XCTAssertEqual(error, EarlGreySnapshotError.recording(deviceAgnostic: true) as NSError)
     }
-    
+
 }

@@ -56,5 +56,5 @@ class SnapshotControllerFactoryTests: XCTestCase {
 
         XCTAssertEqual("/reference/directory", controller.referenceDirectory)
     }
-    
+
 }

@@ -2,7 +2,8 @@ import XCTest
 
 class CurrentTestObserver: NSObject, XCTestObservation {
 
-    static let shared = CurrentTestObserver()
+    static let shared: CurrentTestObserver = CurrentTestObserver()
+
     var currentCase: XCTestCase?
 
     func testCaseWillStart(_ testCase: XCTestCase) {

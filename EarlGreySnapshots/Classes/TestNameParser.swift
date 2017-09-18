@@ -27,5 +27,5 @@ class TestNameParser {
 
         return TestCaseInfo(testClassName: testClassName, testMethodName: testMethodName)
     }
-    
+
 }

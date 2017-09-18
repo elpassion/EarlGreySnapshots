@@ -32,5 +32,5 @@ class TestNameParserTests: XCTestCase {
         XCTAssertEqual("EarlGreySnapshots_Tests_EarlGreySnapshotErrorTests", result.testClassName)
         XCTAssertEqual("testMethodName", result.testMethodName)
     }
-    
+
 }
