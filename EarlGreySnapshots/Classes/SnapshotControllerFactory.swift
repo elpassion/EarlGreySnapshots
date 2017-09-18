@@ -1,9 +1,7 @@
 import FBSnapshotTestCase
 
 protocol SnapshotControllerCreating {
-
     func makeSnapshotController(withInfo info: SnapshotControllerInfo) -> SnapshotTestController
-
 }
 
 class SnapshotControllerFactory: SnapshotControllerCreating {

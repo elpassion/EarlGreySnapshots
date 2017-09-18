@@ -1,10 +1,8 @@
 import Foundation
 
 struct TestCaseInfo {
-
     let testClassName: String
     let testMethodName: String
-
 }
 
 class TestNameParser {

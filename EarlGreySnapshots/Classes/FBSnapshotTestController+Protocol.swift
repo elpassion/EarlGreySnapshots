@@ -1,14 +1,12 @@
 import FBSnapshotTestCase
 
 protocol SnapshotTestController: class {
-
     var agnostic: Bool { get }
     var recording: Bool { get }
     var usesDrawInRect: Bool { get }
     var referenceDirectory: String { get }
 
     func compare(viewOrLayer: Any, selector: String, identifier: String?, tolerance: CGFloat) throws
-
 }
 
 extension FBSnapshotTestController: SnapshotTestController {
