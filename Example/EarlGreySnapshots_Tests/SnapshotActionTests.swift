@@ -33,7 +33,7 @@ class SnapshotActionTests: XCTestCase {
     func testAssertionShouldInvokeControllerFactoryWithCorrectArguments() {
         let assertion = grey_snapshot(testName: "The Test Name", snapshotName: "The Snapshot Name", recordMode: false,
                                       deviceAgnostic: true, controllerFactory: factory,
-                                      imageDirectoryProvider: directoryProviderStub)
+                                      imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         assertion.assert(view, error: &error)
@@ -46,7 +46,7 @@ class SnapshotActionTests: XCTestCase {
 
     func testAssertionShouldInvokeControllersCompareWithCorrectArguments() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory, imageDirectoryProvider: directoryProviderStub)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         assertion.assert(view, error: &error)
@@ -60,7 +60,7 @@ class SnapshotActionTests: XCTestCase {
 
     func testAssertionShouldReturnTrueIfNoErrorIsRaised() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory, imageDirectoryProvider: directoryProviderStub)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
@@ -73,7 +73,7 @@ class SnapshotActionTests: XCTestCase {
         let comparisonError = NSError(domain: "ComparisonError", code: 1, userInfo: ["Hey": "Hi"])
         controller.error = comparisonError
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory, imageDirectoryProvider: directoryProviderStub)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
@@ -85,7 +85,7 @@ class SnapshotActionTests: XCTestCase {
     func testAssertionShouldAlwaysReturnErrorInRecordMode() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: true,
                                       deviceAgnostic: false, controllerFactory: factory,
-                                      imageDirectoryProvider: directoryProviderStub)
+                                      imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
@@ -97,7 +97,7 @@ class SnapshotActionTests: XCTestCase {
 
     func testActionShouldAlwaysPassDeviceAgnosticToErrorInRecordMode() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: true,
-                                      deviceAgnostic: true, controllerFactory: factory, imageDirectoryProvider: nil)
+                                      deviceAgnostic: true, controllerFactory: factory)
         var error: NSError?
 
         assertion.assert(view, error: &error)
