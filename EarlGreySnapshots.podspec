@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'EarlGreySnapshots/Classes/**/*'
   s.frameworks = 'Foundation', 'XCTest'
-  s.dependency 'EarlGrey', '~> 1.9'
+  s.dependency 'EarlGrey', '~> 1.12'
   s.dependency 'FBSnapshotTestCase', '~> 2.1'
 end

@@ -1,7 +1,7 @@
 PODS:
-  - EarlGrey (1.9.2)
+  - EarlGrey (1.12.1)
   - EarlGreySnapshots (0.0.2):
-    - EarlGrey (~> 1.9)
+    - EarlGrey (~> 1.12)
     - FBSnapshotTestCase (~> 2.1)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
@@ -17,8 +17,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  EarlGrey: b78a93bd5fddba9a79a8e5ec5ae8a7718453ca40
-  EarlGreySnapshots: 99242831a0705f4a9d8820401992c58b90824ed9
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
+  EarlGreySnapshots: c00c202eb10d04c3b3b418cb0f651189590dd701
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: fc8cd5b940c91af35a82834d4961f0ef3f19756f
