@@ -10,6 +10,7 @@
 		28B675FE4C2E2B6E7D4F9E61 /* Pods_EarlGreySnapshots_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4A1F933B66B668C52D05C0 /* Pods_EarlGreySnapshots_Tests.framework */; };
 		4E4C00D01F6E604C0016C651 /* ImagesDirectoryProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C00CF1F6E604C0016C651 /* ImagesDirectoryProviderTests.swift */; };
 		4E4C00D21F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C00D11F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift */; };
+		4E6E642F1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */; };
 		4EB29DFE1F6D04FD009414C1 /* BundleNameProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */; };
 		4EB29E011F6D0754009414C1 /* BundleStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E001F6D0754009414C1 /* BundleStub.swift */; };
 		4EB29E051F6D1514009414C1 /* Bundle+TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */; };
@@ -42,6 +43,7 @@
 		312685EDB7169AC8980A968C /* Pods-EarlGreySnapshots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlGreySnapshots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarlGreySnapshots_Tests/Pods-EarlGreySnapshots_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4E4C00CF1F6E604C0016C651 /* ImagesDirectoryProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDirectoryProviderTests.swift; sourceTree = "<group>"; };
 		4E4C00D11F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDirectoryProviderStub.swift; sourceTree = "<group>"; };
+		4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotControllerInfo+TestData.swift"; sourceTree = "<group>"; };
 		4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleNameProviderTests.swift; sourceTree = "<group>"; };
 		4EB29E001F6D0754009414C1 /* BundleStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleStub.swift; sourceTree = "<group>"; };
 		4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TestBundle.swift"; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E6E642D1F700625001DCE28 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4EB29DFF1F6D0742009414C1 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		607FACE81AFB9204008FA782 /* EarlGreySnapshots_Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4E6E642D1F700625001DCE28 /* Data */,
 				8CA178D31ECEFC1B005C5187 /* Mocks */,
 				4EB29DFF1F6D0742009414C1 /* Stubs */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -309,6 +320,7 @@
 				8CA178D51ECEFC92005C5187 /* SnapshotControllerMock.swift in Sources */,
 				8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */,
 				4E4C00D21F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift in Sources */,
+				4E6E642F1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift in Sources */,
 				8CA178E31ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift in Sources */,
 				8CA178D01ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift in Sources */,
 				C9D3067BB5699DDF6162D081 /* EarlGrey.swift in Sources */,

@@ -4,7 +4,6 @@ import XCTest
 class SnapshotControllerFactoryTests: XCTestCase {
 
     var sut: SnapshotControllerFactory!
-    var info: SnapshotControllerInfo!
 
     override func setUp() {
         super.setUp()
@@ -16,14 +15,10 @@ class SnapshotControllerFactoryTests: XCTestCase {
         super.tearDown()
 
         sut = nil
-        info = nil
     }
 
     func testControllerHasCorrectUsesDrawViewHierarchyInRectSettingSet() {
-        info = SnapshotControllerInfo(testName: "TestName",
-                                      deviceAgnostic: false,
-                                      recordMode: false,
-                                      imagesDirectory: "")
+        let info = SnapshotControllerInfo.testInfo(testName: "TestName", deviceAgnostic: false, recordMode: false)
 
         let controller = sut.makeSnapshotController(withInfo: info)
 
@@ -31,27 +26,31 @@ class SnapshotControllerFactoryTests: XCTestCase {
     }
 
     func testControllerHasCorrectDeviceAgnosticSettingSet() {
-        info = SnapshotControllerInfo(testName: "", deviceAgnostic: false, recordMode: false, imagesDirectory: "")
-        let firstController = sut.makeSnapshotController(withInfo: info)
-        info = SnapshotControllerInfo(testName: "", deviceAgnostic: true, recordMode: false, imagesDirectory: "")
-        let secondController = sut.makeSnapshotController(withInfo: info)
+        let firstInfo = SnapshotControllerInfo.testInfo(deviceAgnostic: false, recordMode: false)
+        let secondInfo = SnapshotControllerInfo.testInfo(deviceAgnostic: true, recordMode: false)
+
+        let firstController = sut.makeSnapshotController(withInfo: firstInfo)
+        let secondController = sut.makeSnapshotController(withInfo: secondInfo)
 
         XCTAssertFalse(firstController.agnostic)
         XCTAssertTrue(secondController.agnostic)
     }
 
     func testControllerHasCorrectRecordModeSet() {
-        info = SnapshotControllerInfo(testName: "", deviceAgnostic: false, recordMode: false, imagesDirectory: "")
-        let firstController = sut.makeSnapshotController(withInfo: info)
-        info = SnapshotControllerInfo(testName: "", deviceAgnostic: false, recordMode: true, imagesDirectory: "")
-        let secondController = sut.makeSnapshotController(withInfo: info)
+        let firstInfo = SnapshotControllerInfo.testInfo(deviceAgnostic: false, recordMode: false)
+        let secondInfo = SnapshotControllerInfo.testInfo(deviceAgnostic: false, recordMode: true)
+
+        let firstController = sut.makeSnapshotController(withInfo: firstInfo)
+        let secondController = sut.makeSnapshotController(withInfo: secondInfo)
 
         XCTAssertFalse(firstController.recording)
         XCTAssertTrue(secondController.recording)
     }
 
     func testControllerHasCorrectimagesDirectorySettingSet() {
-        info = SnapshotControllerInfo(testName: "", deviceAgnostic: false, recordMode: false, imagesDirectory: "/reference/directory")
+        let info = SnapshotControllerInfo.testInfo(deviceAgnostic: false,
+                                                   recordMode: false,
+                                                   imagesDirectory: "/reference/directory")
 
         let controller = sut.makeSnapshotController(withInfo: info)
 
