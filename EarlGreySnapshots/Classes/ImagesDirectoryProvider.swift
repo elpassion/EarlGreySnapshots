@@ -1,8 +1,3 @@
-//
-//  Created by Mateusz Szklarek on 17/09/2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 import FBSnapshotTestCase
 
 protocol ImagesDirectoryProviding {
