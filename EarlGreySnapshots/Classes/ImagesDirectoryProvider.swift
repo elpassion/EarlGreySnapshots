@@ -12,6 +12,8 @@ class ImagesDirectoryProvider: ImagesDirectoryProviding {
         self.suffixes = suffixes
     }
 
+    // MARK: - ImagesDirectoryProviding
+
     var directory: String {
         return [referenceDirectory, suffixes.firstObject].flatMap { $0 as? String }.joined()
     }
