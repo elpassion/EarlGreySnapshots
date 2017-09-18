@@ -22,6 +22,7 @@ class CurrentTestObserver: NSObject, XCTestObservation {
 
 extension XCTestObservationCenter {
 
+    // TODO: Method 'initialize()' defines Objective-C class method 'initialize', which is not permitted by Swift
     override open class func initialize() {
         super.initialize()
         XCTestObservationCenter.shared.addTestObserver(CurrentTestObserver.shared)
