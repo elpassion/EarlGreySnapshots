@@ -1,8 +1,3 @@
-//
-//  Created by Jakub Turek on 19.05.2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 @testable import EarlGreySnapshots
 import XCTest
 
@@ -10,6 +5,7 @@ class SnapshotActionTests: XCTestCase {
 
     var controller: SnapshotControllerMock!
     var factory: SnapshotControllerFactoryMock!
+    var directoryProviderStub: ImagesDirectoryProviding!
     var view: UIView!
 
     override func setUp() {
@@ -17,6 +13,7 @@ class SnapshotActionTests: XCTestCase {
         controller = SnapshotControllerMock()
         factory = SnapshotControllerFactoryMock()
         factory.controllerMock = controller
+        directoryProviderStub = ImagesDirectoryProviderStub()
         view = UIView()
     }
 
@@ -35,19 +32,21 @@ class SnapshotActionTests: XCTestCase {
 
     func testAssertionShouldInvokeControllerFactoryWithCorrectArguments() {
         let assertion = grey_snapshot(testName: "The Test Name", snapshotName: "The Snapshot Name", recordMode: false,
-                                      deviceAgnostic: true, controllerFactory: factory)
+                                      deviceAgnostic: true, controllerFactory: factory,
+                                      imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         assertion.assert(view, error: &error)
 
-        XCTAssertFalse(factory.recordMode!)
-        XCTAssertTrue(factory.deviceAgnostic!)
-        XCTAssertEqual("The Test Name", factory.testName!)
+        XCTAssertFalse(factory.info!.recordMode)
+        XCTAssertTrue(factory.info!.deviceAgnostic)
+        XCTAssertEqual("The Test Name", factory.info?.testName)
+        XCTAssertEqual("FakeDirectory_64", factory.info?.imagesDirectory)
     }
 
     func testAssertionShouldInvokeControllersCompareWithCorrectArguments() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         assertion.assert(view, error: &error)
@@ -56,11 +55,12 @@ class SnapshotActionTests: XCTestCase {
         XCTAssertEqual("SN", controller.selector!)
         XCTAssertNil(controller.identifier)
         XCTAssertEqual(0.0, controller.tolerance!)
+        XCTAssertEqual("FakeDirectory_64", factory.info?.imagesDirectory)
     }
 
     func testAssertionShouldReturnTrueIfNoErrorIsRaised() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
@@ -73,7 +73,7 @@ class SnapshotActionTests: XCTestCase {
         let comparisonError = NSError(domain: "ComparisonError", code: 1, userInfo: ["Hey": "Hi"])
         controller.error = comparisonError
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: false, deviceAgnostic: false,
-                                      controllerFactory: factory)
+                                      controllerFactory: factory, imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
@@ -84,13 +84,15 @@ class SnapshotActionTests: XCTestCase {
 
     func testAssertionShouldAlwaysReturnErrorInRecordMode() {
         let assertion = grey_snapshot(testName: "TN", snapshotName: "SN", recordMode: true,
-                                      deviceAgnostic: false, controllerFactory: factory)
+                                      deviceAgnostic: false, controllerFactory: factory,
+                                      imagesDirectoryProvider: directoryProviderStub)
         var error: NSError?
 
         let success = assertion.assert(view, error: &error)
 
         XCTAssertEqual(error, EarlGreySnapshotError.recording(deviceAgnostic: false) as NSError)
         XCTAssertFalse(success)
+        XCTAssertEqual("FakeDirectory_64", factory.info?.imagesDirectory)
     }
 
     func testActionShouldAlwaysPassDeviceAgnosticToErrorInRecordMode() {
@@ -102,5 +104,5 @@ class SnapshotActionTests: XCTestCase {
 
         XCTAssertEqual(error, EarlGreySnapshotError.recording(deviceAgnostic: true) as NSError)
     }
-    
+
 }

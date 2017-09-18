@@ -1,13 +1,9 @@
-//
-//  Created by Jakub Turek on 19.05.2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 import XCTest
 
 class CurrentTestObserver: NSObject, XCTestObservation {
 
-    static let shared = CurrentTestObserver()
+    static let shared: CurrentTestObserver = CurrentTestObserver()
+
     var currentCase: XCTestCase?
 
     func testCaseWillStart(_ testCase: XCTestCase) {

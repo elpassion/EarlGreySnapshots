@@ -1,15 +1,8 @@
-//
-//  Created by Jakub Turek on 19.05.2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 import Foundation
 
 struct TestCaseInfo {
-
     let testClassName: String
     let testMethodName: String
-
 }
 
 class TestNameParser {
@@ -34,5 +27,5 @@ class TestNameParser {
 
         return TestCaseInfo(testClassName: testClassName, testMethodName: testMethodName)
     }
-    
+
 }

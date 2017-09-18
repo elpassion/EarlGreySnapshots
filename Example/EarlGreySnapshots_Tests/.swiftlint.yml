@@ -1,0 +1,19 @@
+disabled_rules:
+  - force_try
+  - force_cast
+  - force_unwrapping
+  - line_length
+  - type_name
+  - function_parameter_count
+  - cyclomatic_complexity
+  - function_body_length
+  - file_length
+  - type_body_length
+  - identifier_name
+
+opt_in_rules:
+  - empty_count
+  - vertical_whitespace
+  - vertical_parameter_alignment_on_call
+  - nimble_operator
+  - single_test_class
