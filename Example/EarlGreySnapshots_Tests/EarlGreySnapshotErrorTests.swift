@@ -1,8 +1,3 @@
-//
-//  Created by Jakub Turek on 19.05.2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 @testable import EarlGreySnapshots
 import XCTest
 
@@ -23,5 +18,5 @@ class EarlGreySnapshotErrorTests: XCTestCase {
 
         XCTAssertEqual("Image recorded successfully! Replace with grey_verifyDeviceAgnosticSnapshot().", failureReason)
     }
-    
+
 }

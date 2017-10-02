@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		28B675FE4C2E2B6E7D4F9E61 /* Pods_EarlGreySnapshots_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4A1F933B66B668C52D05C0 /* Pods_EarlGreySnapshots_Tests.framework */; };
-		6F892B7C62344DF1D0987194 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4E4C00D01F6E604C0016C651 /* ImagesDirectoryProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C00CF1F6E604C0016C651 /* ImagesDirectoryProviderTests.swift */; };
 		4E4C00D21F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4C00D11F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift */; };
+		4E6E642F1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */; };
 		4EB29DFE1F6D04FD009414C1 /* BundleNameProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */; };
 		4EB29E011F6D0754009414C1 /* BundleStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E001F6D0754009414C1 /* BundleStub.swift */; };
 		4EB29E051F6D1514009414C1 /* Bundle+TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */; };
+		6F892B7C62344DF1D0987194 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */; };
 		8CA178CC1ECEF1D7005C5187 /* SnapshotActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */; };
 		8CA178D01ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178CF1ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift */; };
@@ -42,6 +43,7 @@
 		312685EDB7169AC8980A968C /* Pods-EarlGreySnapshots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlGreySnapshots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarlGreySnapshots_Tests/Pods-EarlGreySnapshots_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4E4C00CF1F6E604C0016C651 /* ImagesDirectoryProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDirectoryProviderTests.swift; sourceTree = "<group>"; };
 		4E4C00D11F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesDirectoryProviderStub.swift; sourceTree = "<group>"; };
+		4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SnapshotControllerInfo+TestData.swift"; sourceTree = "<group>"; };
 		4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleNameProviderTests.swift; sourceTree = "<group>"; };
 		4EB29E001F6D0754009414C1 /* BundleStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleStub.swift; sourceTree = "<group>"; };
 		4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TestBundle.swift"; sourceTree = "<group>"; };
@@ -56,10 +58,10 @@
 		8CA178D61ECEFCBC005C5187 /* SnapshotControllerFactoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotControllerFactoryMock.swift; sourceTree = "<group>"; };
 		8CA178E21ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlGreySnapshotErrorTests.swift; sourceTree = "<group>"; };
 		AE4A1F933B66B668C52D05C0 /* Pods_EarlGreySnapshots_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarlGreySnapshots_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50FC18FD08C93B5369A9B6F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B50FC18FD08C93B5369A9B6F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		B837D38416539EBAA783427A /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
-		C012EBB5D2BB9C4E98FF7169 /* EarlGreySnapshots.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EarlGreySnapshots.podspec; path = ../EarlGreySnapshots.podspec; sourceTree = "<group>"; };
-		C302E045887509D7CDB71378 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C012EBB5D2BB9C4E98FF7169 /* EarlGreySnapshots.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EarlGreySnapshots.podspec; path = ../../EarlGreySnapshots.podspec; sourceTree = "<group>"; };
+		C302E045887509D7CDB71378 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		F477714251D07FBC0BB17924 /* EarlGrey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EarlGrey.framework; path = "${SRCROOT}/Pods/EarlGrey/EarlGrey/EarlGrey.framework"; sourceTree = SRCROOT; };
 /* End PBXFileReference section */
 
@@ -85,23 +87,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4E6E642D1F700625001DCE28 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4E6E642E1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4EB29DFF1F6D0742009414C1 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
 				4EB29E001F6D0754009414C1 /* BundleStub.swift */,
 				4E4C00D11F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift */,
 			);
-			name = Stubs;
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* EarlGreySnapshots_Tests */,
-				607FACD11AFB9204008FA782 /* Products */,
-				300B67493E0FF712A7F941FB /* Pods */,
 				AD38C6BD651195CE816AB092 /* Frameworks */,
+				300B67493E0FF712A7F941FB /* Pods */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD11AFB9204008FA782 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,20 +127,20 @@
 		607FACE81AFB9204008FA782 /* EarlGreySnapshots_Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4E6E642D1F700625001DCE28 /* Data */,
 				8CA178D31ECEFC1B005C5187 /* Mocks */,
 				4EB29DFF1F6D0742009414C1 /* Stubs */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
 				4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */,
 				4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */,
+				B837D38416539EBAA783427A /* EarlGrey.swift */,
 				8CA178E21ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift */,
 				4E4C00CF1F6E604C0016C651 /* ImagesDirectoryProviderTests.swift */,
-				8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */,
 				8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */,
 				8CA178CF1ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-				B837D38416539EBAA783427A /* EarlGrey.swift */,
+				8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */,
 			);
-			name = EarlGreySnapshots_Tests;
-			path = Tests;
+			path = EarlGreySnapshots_Tests;
 			sourceTree = "<group>";
 		};
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
@@ -138,26 +148,26 @@
 			children = (
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
 				C012EBB5D2BB9C4E98FF7169 /* EarlGreySnapshots.podspec */,
-				B50FC18FD08C93B5369A9B6F /* README.md */,
 				C302E045887509D7CDB71378 /* LICENSE */,
+				B50FC18FD08C93B5369A9B6F /* README.md */,
 			);
-			name = "Podspec Metadata";
+			path = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		8CA178D31ECEFC1B005C5187 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				8CA178D41ECEFC92005C5187 /* SnapshotControllerMock.swift */,
 				8CA178D61ECEFCBC005C5187 /* SnapshotControllerFactoryMock.swift */,
+				8CA178D41ECEFC92005C5187 /* SnapshotControllerMock.swift */,
 			);
-			name = Mocks;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		AD38C6BD651195CE816AB092 /* Frameworks */ = {
@@ -178,6 +188,7 @@
 			buildPhases = (
 				51EAFDDFCB91DC2BCCC80BCC /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
+				4E6E64301F700944001DCE28 /* SwiftLint */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				997AC0FC61DC8002F83BC4B5 /* [CP] Embed Pods Frameworks */,
@@ -239,6 +250,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4E6E64301F700944001DCE28 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd EarlGreySnapshots_Tests; ${PODS_ROOT}/SwiftLint/swiftlint\ncd ../../EarlGreySnapshots/; ${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 		51EAFDDFCB91DC2BCCC80BCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +335,7 @@
 				8CA178D51ECEFC92005C5187 /* SnapshotControllerMock.swift in Sources */,
 				8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */,
 				4E4C00D21F6E66CE0016C651 /* ImagesDirectoryProviderStub.swift in Sources */,
+				4E6E642F1F700631001DCE28 /* SnapshotControllerInfo+TestData.swift in Sources */,
 				8CA178E31ECF0E2F005C5187 /* EarlGreySnapshotErrorTests.swift in Sources */,
 				8CA178D01ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift in Sources */,
 				C9D3067BB5699DDF6162D081 /* EarlGrey.swift in Sources */,
@@ -426,7 +452,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "EarlGreySnapshots_Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 312685EDB7169AC8980A968C /* Pods-EarlGreySnapshots_Tests.release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "EarlGreySnapshots_Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

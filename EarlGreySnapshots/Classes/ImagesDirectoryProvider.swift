@@ -1,8 +1,3 @@
-//
-//  Created by Mateusz Szklarek on 17/09/2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 import FBSnapshotTestCase
 
 protocol ImagesDirectoryProviding {
@@ -16,6 +11,8 @@ class ImagesDirectoryProvider: ImagesDirectoryProviding {
         self.environment = environment
         self.suffixes = suffixes
     }
+
+    // MARK: - ImagesDirectoryProviding
 
     var directory: String {
         return [referenceDirectory, suffixes.firstObject].flatMap { $0 as? String }.joined()

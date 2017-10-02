@@ -1,8 +1,3 @@
-//
-//  Created by Jakub Turek on 19.05.2017.
-//  Copyright © 2017 EL Passion. All rights reserved.
-//
-
 import EarlGrey
 
 func grey_snapshot(testCaseName: String?, recordMode: Bool, deviceAgnostic: Bool) -> GREYAssertionBlock {
@@ -21,19 +16,19 @@ func grey_snapshot(testName: String,
                    snapshotName: String,
                    recordMode: Bool,
                    deviceAgnostic: Bool,
-                   controllerFactory: SnapshotControllerCreating? = nil,
-                   imageDirectoryProvider: ImagesDirectoryProviding? = nil) -> GREYAssertionBlock {
-    return GREYAssertionBlock.init(name: "snapshot", assertionBlockWithError: { element, errorOrNil -> Bool in
-        guard let view = element as? UIView else { return false }
-
-        let factory = controllerFactory ?? SnapshotControllerFactory()
-        let directoryProvider = imageDirectoryProvider ?? ImagesDirectoryProvider()
+                   controllerFactory: SnapshotControllerCreating = SnapshotControllerFactory(),
+                   imagesDirectoryProvider: ImagesDirectoryProviding = ImagesDirectoryProvider())
+    -> GREYAssertionBlock {
+    return GREYAssertionBlock(name: "snapshot") { element, errorOrNil -> Bool in
+        guard let view = element as? UIView else {
+            return false
+        }
 
         let snapshotInfo = SnapshotControllerInfo(testName: testName,
                                                   deviceAgnostic: deviceAgnostic,
                                                   recordMode: recordMode,
-                                                  imagesDirectory: directoryProvider.directory)
-        let testController = factory.makeSnapshotController(withInfo: snapshotInfo)
+                                                  imagesDirectory: imagesDirectoryProvider.directory)
+        let testController = controllerFactory.makeSnapshotController(withInfo: snapshotInfo)
 
         do {
             try testController.compare(viewOrLayer: view, selector: snapshotName, identifier: nil, tolerance: 0.0)
@@ -46,5 +41,5 @@ func grey_snapshot(testName: String,
         }
 
         return errorOrNil?.pointee == nil
-    })
+    }
 }
