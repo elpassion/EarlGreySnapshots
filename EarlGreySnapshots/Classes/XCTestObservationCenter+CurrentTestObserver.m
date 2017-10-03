@@ -1,5 +1,5 @@
-#import "XCTestObservationCenter+CurrentTestObserver.h"
 #import "EarlGreySnapshots/EarlGreySnapshots-Swift.h"
+#import "XCTestObservationCenter+CurrentTestObserver.h"
 
 @implementation XCTestObservationCenter (CurrentTestObserver)
 
