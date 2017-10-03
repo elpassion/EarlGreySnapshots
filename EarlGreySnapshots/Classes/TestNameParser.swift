@@ -19,11 +19,11 @@ class TestNameParser {
         }
 
         let testClassName = (testName as NSString)
-            .substring(with: match.rangeAt(1))
+            .substring(with: match.range(at: 1))
             .replacingOccurrences(of: ".", with: "_")
 
         let testMethodName = (testName as NSString)
-            .substring(with: match.rangeAt(2))
+            .substring(with: match.range(at: 2))
 
         return TestCaseInfo(testClassName: testClassName, testMethodName: testMethodName)
     }
