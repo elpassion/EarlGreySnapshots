@@ -53,8 +53,8 @@ public func GREYAssertEqualObjects<T: Equatable>( _ left: @autoclosure () -> T?,
     " to the object of the right term")
 }
 
-public func GREYAssertNotEqualObjects<T: Equatable>(_ left: @autoclosure () -> T?, right: @autoclosure () -> T?,
-                                                    reason: String) {
+public func GREYAssertNotEqualObjects<T: Equatable>( _ left: @autoclosure () -> T?,
+                                      _ right: @autoclosure () -> T?, reason: String) {
   GREYAssert(left() != right(), reason, details: "Expected object of the left term to not" +
     " equal the object of the right term")
 }
@@ -97,24 +97,24 @@ private func GREYWaitUntilIdle() {
 }
 
 open class EarlGrey: NSObject {
-  open class func select(elementWithMatcher matcher: GREYMatcher,
-                         file: StaticString = #file,
-                         line: UInt = #line) -> GREYElementInteraction {
+  open class func select(elementWithMatcher matcher:GREYMatcher,
+                           file: StaticString = #file,
+                           line: UInt = #line) -> GREYElementInteraction {
     return EarlGreyImpl.invoked(fromFile: file.description, lineNumber: line)
              .selectElement(with: matcher)
   }
 
   open class func setFailureHandler(handler: GREYFailureHandler,
-                                    file: StaticString = #file,
-                                    line: UInt = #line) {
+                                      file: StaticString = #file,
+                                      line: UInt = #line) {
     return EarlGreyImpl.invoked(fromFile: file.description, lineNumber: line)
              .setFailureHandler(handler)
   }
 
   open class func handle(exception: GREYFrameworkException,
-                         details: String,
-                         file: StaticString = #file,
-                         line: UInt = #line) {
+                           details: String,
+                           file: StaticString = #file,
+                           line: UInt = #line) {
     return EarlGreyImpl.invoked(fromFile: file.description, lineNumber: line)
              .handle(exception, details: details)
   }
@@ -136,7 +136,7 @@ extension GREYInteraction {
   }
 
   @discardableResult public func assert(_ matcher: @autoclosure () -> GREYMatcher,
-                                        error: UnsafeMutablePointer<NSError?>!) -> Self {
+                                        error:UnsafeMutablePointer<NSError?>!) -> Self {
     return self.assert(with: matcher(), error: error)
   }
 
