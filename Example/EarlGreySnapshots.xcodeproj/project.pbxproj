@@ -14,7 +14,6 @@
 		4EB29DFE1F6D04FD009414C1 /* BundleNameProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29DFD1F6D04FD009414C1 /* BundleNameProviderTests.swift */; };
 		4EB29E011F6D0754009414C1 /* BundleStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E001F6D0754009414C1 /* BundleStub.swift */; };
 		4EB29E051F6D1514009414C1 /* Bundle+TestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB29E041F6D1514009414C1 /* Bundle+TestBundle.swift */; };
-		6F892B7C62344DF1D0987194 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		8CA178C31ECEE90B005C5187 /* TestNameParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178C21ECEE90B005C5187 /* TestNameParserTests.swift */; };
 		8CA178CC1ECEF1D7005C5187 /* SnapshotActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178CB1ECEF1D7005C5187 /* SnapshotActionTests.swift */; };
 		8CA178D01ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA178CF1ECEF42F005C5187 /* SnapshotControllerFactoryTests.swift */; };
@@ -24,20 +23,6 @@
 		9E4F9AC23E811C202FEEDCBA /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F477714251D07FBC0BB17924 /* EarlGrey.framework */; };
 		C9D3067BB5699DDF6162D081 /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837D38416539EBAA783427A /* EarlGrey.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		09BECF9085008BB9EE98CBBA /* EarlGrey Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(TEST_HOST)/../";
-			dstSubfolderSpec = 0;
-			files = (
-				6F892B7C62344DF1D0987194 /* EarlGrey.framework in EarlGrey Copy Files */,
-			);
-			name = "EarlGrey Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		312685EDB7169AC8980A968C /* Pods-EarlGreySnapshots_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarlGreySnapshots_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarlGreySnapshots_Tests/Pods-EarlGreySnapshots_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +178,6 @@
 				607FACE31AFB9204008FA782 /* Resources */,
 				997AC0FC61DC8002F83BC4B5 /* [CP] Embed Pods Frameworks */,
 				C2B018C706FF70A2DEA0013A /* [CP] Copy Pods Resources */,
-				09BECF9085008BB9EE98CBBA /* EarlGrey Copy Files */,
 			);
 			buildRules = (
 			);
